@@ -140,8 +140,8 @@ CREATE TABLE Movies (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   title TEXT,
   release_year INTEGER,
-  rating TEXT
-  studio_id INTEGER
+  rating TEXT,
+  studio TEXT,
 );
 
 CREATE TABLE Actors (
@@ -166,7 +166,39 @@ CREATE TABLE Studios (
   movie_id INTEGER
   );
 
-
-  .mode column
-  ,headers off
-  ;
+  INSERT INTO Movies (
+  title,
+  release_year,
+  rating,
+  studio
+)
+VALUES (
+  "Batman Begins",
+  "2005",
+  "PG-13",
+  "Warner Bros.",
+);
+  INSERT INTO Movies (
+  title,
+  release_year,
+  rating,
+  studio,
+)
+VALUES (
+  "The Dark Knight",
+  "2008",
+  "PG-13",
+  "Warner Bros.",
+);
+  INSERT INTO Movies (
+  title,
+  release_year,
+  rating,
+  studio,
+)
+VALUES (
+  "The Dark Knight Rises",
+  "20012",
+  "PG-13",
+  "Warner Bros.",
+);
