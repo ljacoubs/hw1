@@ -130,3 +130,43 @@
 
 -- The SQL statement for the cast output
 -- TODO!
+
+DROP TABLE IF EXISTS Movies;
+DROP TABLE IF EXISTS Actors;
+DROP TABLE IF EXISTS Characters;
+DROP TABLE IF EXISTS Studios;
+
+CREATE TABLE Movies (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT,
+  release_year INTEGER,
+  rating TEXT
+  studio_id INTEGER
+);
+
+CREATE TABLE Actors (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  first_name TEXT,
+  last_name TEXT,
+  character_id INTEGER
+  movie_id INTEGER
+);
+
+CREATE TABLE Characters (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  first_name TEXT,
+  last_name TEXT,
+  actor_id INTEGER
+  movie_id INTEGER
+);
+
+CREATE TABLE Studios (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT,
+  movie_id INTEGER
+  );
+
+
+  .mode column
+  ,headers off
+  ;
