@@ -8,7 +8,7 @@ id INTEGER PRIMARY KEY AUTOINCREMENT,
 title TEXT,
 release_year INTEGER,
 rating TEXT,
-studio_id INTEGER
+studio text
 );
 
 CREATE TABLE actors (
@@ -35,37 +35,37 @@ INSERT INTO movies (
 title,
 release_year,
 rating,
-studio_id
+studio
 )
 VALUES (
 "Batman Begins",
 "2005",
 "PG-13",
-"1"
+"Warner Bros."
 );
 INSERT INTO movies (
 title,
 release_year,
 rating,
-studio_id
+studio
 )
 VALUES (
 "The Dark Knight",
 "2008",
 "PG-13",
-"1"
+"Warner Bros."
 );
 INSERT INTO movies (
 title,
 release_year,
 rating,
-studio_id
+studio
 )
 VALUES (
 "The Dark Knight Rises",
 "2012",
 "PG-13",
-"1"
+"Warner Bros."
 );
 INSERT INTO actors (
 first_name,
@@ -328,6 +328,30 @@ VALUES (
 "11",
 "3"
 );
+INSERT INTO studios (
+name,
+movie_id
+)
+VALUES (
+"Warner Bros.",
+"1"
+);
+INSERT INTO studios (
+name,
+movie_id
+)
+VALUES (
+"Warner Bros.",
+"2"
+);
+INSERT INTO studios (
+name,
+movie_id
+)
+VALUES (
+"Warner Bros.",
+"3"
+);
 
-select *
-from characters
+Select title, release_year, rating, studio
+from movies;
