@@ -354,4 +354,7 @@ VALUES (
 );
 
 Select title, release_year, rating, studio
-from movies;
+from movies
+;
+
+
