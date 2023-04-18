@@ -353,8 +353,26 @@ VALUES (
 "3"
 );
 
+.print "Movies"
+.print "======"
+.print ""
+;
+
 Select title, release_year, rating, studio
 from movies
+;
+
+.print ""
+.print "Top Cast"
+.print "========"
+.print ""
+;
+
+select movies.title, actors.first_name, actors.last_name, characters.name
+from movies
+inner join characters on characters.movie_id = movies.id
+inner join actors on actors.id = characters.actor_id
+order by movies.title
 ;
 
 
